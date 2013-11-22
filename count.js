@@ -33,12 +33,6 @@ console.log(variabele);
 
 
 
-
-
-
-
-
-
 /*
 
 if (variabele > 10) {
@@ -299,27 +293,53 @@ fs.appendFile(fn, "Hey there!\n", function(err) {
 
 
 
+ 
 
 
 
-// ##############################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*
 
-var lazy = new Lazy;
-lazy
-  .filter(function (item) {
-    return item % 2 == 0
-  })
-  .take(5)
-  .map(function (item) {
-    return item*2;
-  })
-  .join(function (xs) {
-    console.log(xs);
-  });
+var Parse = require('node-parse-api').Parse;
 
-   [0,1,2,3,4,5,6,7,8,9,10].forEach(function (x) {
-      lazy.emit('data', x);
-    });*/
+var APP_ID = "eiUSyEgtTk53OuYHAnxMigQRBAtwqPRRMqe4XRSh";
+var MASTER_KEY = "POhGrSUi5PiWdwuJqyaazGwydYWRlod2TUCVPVSk";
+
+var app = new Parse(APP_ID, MASTER_KEY);
+
+// add a Foo object, { foo: 'bar' }
+app.insert('Foo', { foo: 'bar' }, function (err, response) {
+  console.log(response);
+});
+*/
+
+
